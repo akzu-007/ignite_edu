@@ -1,0 +1,216 @@
+/* Global Styles */
+:root {
+    --primary-color: #08427f;
+    --secondary-color: #497e56;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --navbar-color: #1a1a2e;
+    --hero-gradient-start: #1a1a2e;
+    --hero-gradient-end: #4a90e2;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding-top: 56px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--navbar-color) !important;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.4) 100%);
+    pointer-events: none;
+}
+
+/* Services Section */
+.services .card,
+.courses .card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.services .card:hover,
+.courses .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Course Categories */
+.category-filters .btn {
+    margin: 0.25rem;
+}
+
+.category-filters .btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Course Details */
+.course-details .btn-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.course-section {
+    transition: all 0.3s ease;
+}
+
+.course-details .collapse {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+}
+
+/* Education Page Specific */
+.education-header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Loans Page Specific */
+.loans-header {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Partner Banks */
+.bank-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.bank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bank-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--dark-color);
+}
+
+/* Gallery */
+.gallery-item {
+    margin-bottom: 1.5rem;
+}
+
+.gallery-item img {
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+}
+
+/* WhatsApp Integration */
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    background: #25D366;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background: #128C7E;
+    color: white !important;
+    text-decoration: none;
+}
+
+.whatsapp-link i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.qr-code {
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.qr-code img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

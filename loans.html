@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Services - Ignite Foundation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Ignite Foundation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Education Consulting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="loans.html">Loan Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="loans-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Loan Services</h1>
+                    <p class="lead">Expert financial solutions for your needs</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Our Loan Services</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Ignite Foundation's loan service agency specializes in helping customers navigate the complex world of banking and loans. Our experienced team provides comprehensive support throughout the loan application process.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>From document collection to legal coordination, we ensure a smooth and efficient loan processing experience. Our expertise covers various types of loans, and we work with multiple banks to find the best solution for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Services -->
+    <section class="services py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Loan Services</h2>
+            <div class="row" id="loan-services">
+                <!-- Services will be populated dynamically from CSV -->
+            </div>
+        </div>    </section>
+
+    <!-- Partner Banks -->
+    <section class="partner-banks py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Banking Partners</h2>
+            <div class="row" id="bank-partners">
+                <!-- Bank partners will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Client Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"The team at Ignite Foundation made my home loan process incredibly smooth."</p>
+                        <footer class="blockquote-footer">Robert Wilson</footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Professional service and excellent guidance throughout my business loan application."</p>
+                        <footer class="blockquote-footer">Lisa Chang</footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Quick and efficient service. Highly recommend their loan assistance!"</p>
+                        <footer class="blockquote-footer">James Martinez</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 gallery-item">
+                    <img src="images/placeholder4.jpg" alt="Loan Consultation" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="images/placeholder5.jpg" alt="Document Processing" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="images/placeholder6.jpg" alt="Client Meeting" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control">
+                                <option value="">Select Loan Type</option>
+                                <option value="home">Home Loan</option>
+                                <option value="business">Business Loan</option>
+                                <option value="personal">Personal Loan</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <p>Email: loans@ignitefoundation.com<br>
+                    Phone: +1 (555) 987-6543</p>
+                    <a href="https://wa.me/15559876543" class="whatsapp-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Scan to Chat</h5>
+                    <div class="qr-code">
+                        <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code">
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5>Address</h5>
+                    <p>456 Financial Avenue<br>
+                    Knowledge City, KN 12345</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for WhatsApp icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

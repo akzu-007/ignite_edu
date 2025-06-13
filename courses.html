@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Listings - Ignite Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Ignite Foundation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="education.html">Education Consulting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loans.html">Loan Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="education-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Course Catalog</h1>
+                    <p class="lead">Explore our comprehensive range of courses and requirements</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Categories -->
+    <section class="course-categories py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="category-filters text-center">
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="all">All Courses</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="healthcare">Healthcare</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="engineering">Engineering</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="business">Business</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="technology">Technology</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="arts">Creative Arts</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed Course Listings -->
+            <div id="detailed-courses">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <p>Email: education@ignitefoundation.com<br>
+                    Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3">WhatsApp</a>
+                        <img src="images/qr-code-placeholder.png" alt="QR Code" style="width: 100px;">
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5>Address</h5>
+                    <p>123 Education Street<br>
+                    Knowledge City, KN 12345</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
