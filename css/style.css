@@ -1,12 +1,12 @@
 /* Global Styles */
 :root {
-    --primary-color: #08427f;
+    --primary-color: #0d4e93;
     --secondary-color: #497e56;
     --dark-color: #1a1a2e;
     --light-color: #f8f9fa;
     --navbar-color: #1a1a2e;
-    --hero-gradient-start: #1a1a2e;
-    --hero-gradient-end: #4a90e2;
+    --hero-gradient-start: #2f2f68;
+    --hero-gradient-end: #59a2f6;
 }
 
 body {
