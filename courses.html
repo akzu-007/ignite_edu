@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Listings - Ignite Foundation</title>
+    <title>Course Catalog - Ignite Foundation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/cap_logo_col.png">
+    <link rel="apple-touch-icon" href="images/cap_logo_col.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore our comprehensive course catalog at Ignite Foundation. Find detailed information about nursing courses, engineering programs, and medical education.">
+    <meta name="keywords" content="course catalog, nursing courses, engineering programs, medical education, BSc Nursing, BTech courses, Kerala education">
+    <meta name="author" content="Ignite Foundation">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Course Catalog - Ignite Foundation">
+    <meta property="og:description" content="Browse our comprehensive catalog of nursing, engineering, and medical courses. Find detailed course information and requirements.">
+    <meta property="og:image" content="images/cap_logo_col.png">
+    <meta property="og:url" content="">
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -48,19 +65,17 @@
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="category-filters text-center">
-                        <button class="btn btn-outline-primary me-2 mb-2" data-category="all">All Courses</button>
-                        <button class="btn btn-outline-primary me-2 mb-2" data-category="healthcare">Healthcare</button>
-                        <button class="btn btn-outline-primary me-2 mb-2" data-category="engineering">Engineering</button>
-                        <button class="btn btn-outline-primary me-2 mb-2" data-category="business">Business</button>
-                        <button class="btn btn-outline-primary me-2 mb-2" data-category="technology">Technology</button>
-                        <button class="btn btn-outline-primary me-2 mb-2" data-category="arts">Creative Arts</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 active" data-category="all">All Courses</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="Nursing">Nursing</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="Engineering">Engineering</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-category="Medical">Medical</button>
                     </div>
                 </div>
             </div>
             
-            <!-- Detailed Course Listings -->
-            <div id="detailed-courses">
-                <!-- Will be populated dynamically -->
+            <!-- Course Listings -->
+            <div id="course-listings">
+                <!-- Will be populated dynamically by JavaScript -->
             </div>
         </div>
     </section>
@@ -119,6 +134,12 @@
                     <h5>Address</h5>
                     <p>Ignite Foundation<br>
                     SN Plaza, College Jn <br> Nangiarkulangara, Haripad</p>
+                    <a href="https://maps.google.com/?q=Ignite+Foundation+SN+Plaza+College+Junction+Nangiarkulangara+Haripad" 
+                       target="_blank" 
+                       class="map-link" 
+                       style="color: #fff; text-decoration: none;">
+                        <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                    </a>
                 </div>
             </div>
         </div>

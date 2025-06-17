@@ -1,61 +1,7 @@
 // Static data instead of loading from CSV
 function getStaticData(type) {
     const data = {
-        courses: [
-            {
-                college: "St. Mary's Medical College",
-                category: "healthcare",
-                courses: [
-                    {
-                        name: "Bachelor of Science in Nursing (BSN)",
-                        requirements: "High school diploma with minimum GPA of 3.0, Biology and Chemistry prerequisites",
-                        duration: "4 years"
-                    },
-                    {
-                        name: "Healthcare Administration",
-                        requirements: "High school diploma with minimum GPA of 2.8, Mathematics and Business prerequisites",
-                        duration: "3 years"
-                    },
-                    {
-                        name: "Medical Laboratory Technology",
-                        requirements: "High school diploma with strong science background, Biology and Chemistry prerequisites",
-                        duration: "2 years"
-                    }
-                ]
-            },
-            {
-                college: "Technical Institute of Engineering",
-                category: "engineering",
-                courses: [
-                    {
-                        name: "Computer Engineering",
-                        requirements: "High school diploma with strong Mathematics and Physics, SAT/ACT scores required",
-                        duration: "4 years"
-                    },
-                    {
-                        name: "Mechanical Engineering",
-                        requirements: "High school diploma with advanced Mathematics and Physics, SAT/ACT scores required",
-                        duration: "4 years"
-                    }
-                ]
-            },
-            {
-                college: "Creative Arts Academy",
-                category: "arts",
-                courses: [
-                    {
-                        name: "Digital Design",
-                        requirements: "Portfolio submission, Basic computer skills",
-                        duration: "3 years"
-                    },
-                    {
-                        name: "Animation",
-                        requirements: "Portfolio submission, Drawing skills assessment",
-                        duration: "4 years"
-                    }
-                ]
-            }
-        ],        loans: [
+        loans: [
             { type: "Home Loan", description: "Complete assistance for home loans including property valuation, documentation, and bank coordination. We help you get the best interest rates." },
             { type: "Business Loan", description: "Comprehensive support for business loans with expert guidance on documentation, business plan preparation, and bank negotiations." },
             { type: "Personal Loan", description: "Quick and efficient personal loan processing with minimal documentation. We ensure fast approval and disbursement." },
@@ -70,7 +16,67 @@ function getStaticData(type) {
             { name: "National Commerce Bank", description: "Leading provider of education and vehicle loans" },
             { name: "Progressive Credit Union", description: "Focused on personal and small business loans" },
             { name: "Unity Savings Bank", description: "Comprehensive range of retail and commercial banking services" }
-        ]
+        ],
+        "partner-institutions": [
+            {
+                name: "St. Joseph's College of Nursing",
+                location: "Dharmagiri, Kothamangalam",
+                type: "Nursing"
+            },
+            {
+                name: "Westfort College of Nursing",
+                location: "Thrissur",
+                type: "Nursing"
+            },
+            {
+                name: "Mar Baselios College of Engineering",
+                location: "Thiruvananthapuram",
+                type: "Engineering"
+            },
+            {
+                name: "Rajagiri College of Engineering",
+                location: "Kochi",
+                type: "Engineering"
+            }
+        ],
+        "courses": {
+            "Nursing": [
+                {
+                    name: "BSc Nursing",
+                    duration: "4 years",
+                    eligibility: "12th with Science (PCB)",
+                    description: "Bachelor of Science in Nursing program"
+                },
+                {
+                    name: "Post Basic BSc Nursing",
+                    duration: "2 years",
+                    eligibility: "GNM",
+                    description: "Post Basic Bachelor of Science in Nursing"
+                }
+            ],
+            "Engineering": [
+                {
+                    name: "B.Tech Computer Science",
+                    duration: "4 years",
+                    eligibility: "12th with PCM",
+                    description: "Bachelor of Technology in Computer Science"
+                },
+                {
+                    name: "B.Tech Mechanical",
+                    duration: "4 years",
+                    eligibility: "12th with PCM",
+                    description: "Bachelor of Technology in Mechanical Engineering"
+                }
+            ],
+            "Medical": [
+                {
+                    name: "MBBS",
+                    duration: "5.5 years",
+                    eligibility: "12th with PCB, NEET qualification",
+                    description: "Bachelor of Medicine and Bachelor of Surgery"
+                }
+            ]
+        }
     };
     return data[type] || [];
 }
@@ -95,6 +101,100 @@ function parseCSV(csvText) {
     }
 
     return result;
+}
+
+// Function to populate course categories and their courses
+function populateCourseCategories(coursesByCategory) {
+    const container = document.getElementById('course-listings');
+    if (!container) return;
+
+    // Clear existing content
+    container.innerHTML = '';
+
+    // Function to render courses
+    function renderCourses(category = 'all') {
+        container.innerHTML = '';
+        
+        Object.keys(coursesByCategory).forEach(courseCategory => {
+            if (category === 'all' || category === courseCategory) {
+                const categorySection = document.createElement('div');
+                categorySection.className = 'col-12 mb-4';
+                categorySection.setAttribute('data-category', courseCategory);
+
+                // Add category heading
+                const categoryHeading = document.createElement('h3');
+                categoryHeading.className = 'mb-3';
+                categoryHeading.textContent = courseCategory;
+                categorySection.appendChild(categoryHeading);
+
+                // Create row for courses
+                const coursesRow = document.createElement('div');
+                coursesRow.className = 'row';
+
+                // Add courses for this category
+                coursesByCategory[courseCategory].forEach(course => {
+                    const courseCol = document.createElement('div');
+                    courseCol.className = 'col-md-6 mb-3';
+                    courseCol.innerHTML = `
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">${course.name}</h5>
+                                <p class="card-text">
+                                    <strong>Duration:</strong> ${course.duration}<br>
+                                    <strong>Eligibility:</strong> ${course.eligibility}<br>
+                                    ${course.description}
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                    coursesRow.appendChild(courseCol);
+                });
+
+                categorySection.appendChild(coursesRow);
+                container.appendChild(categorySection);
+            }
+        });
+    }
+
+    // Initial render
+    renderCourses('all');
+
+    // Set up filter buttons
+    const filterButtons = document.querySelectorAll('.category-filters button');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            // Get selected category and render
+            const category = button.getAttribute('data-category');
+            renderCourses(category);
+        });
+    });
+}
+
+// Function to populate partner institutions
+function populatePartnerInstitutions(institutions) {
+    const container = document.getElementById('partner-institutions');
+    if (!container) return;
+
+    institutions.forEach(institution => {
+        const col = document.createElement('div');
+        col.className = 'col-md-6 mb-3';
+        col.innerHTML = `
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">${institution.name}</h5>
+                    <p class="card-text">
+                        <strong>Location:</strong> ${institution.location}<br>
+                        <strong>Type:</strong> ${institution.type}
+                    </p>
+                </div>
+            </div>
+        `;
+        container.appendChild(col);
+    });
 }
 
 // Function to populate partner institutions
@@ -221,23 +321,22 @@ function populateBankPartners(banks) {
 
 // Initialize the page based on current page
 document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = window.location.pathname;
-    console.log('Current page:', currentPage);
-    
-    if (currentPage.includes('education.html')) {
-        const courses = getStaticData('courses');
-        console.log('Loaded courses:', courses);
-        populateCourses(courses);
-    } else if (currentPage.includes('courses.html')) {
-        const courses = getStaticData('courses');
-        console.log('Loaded detailed courses:', courses);
-        populateDetailedCourses(courses);
-    } else if (currentPage.includes('loans.html')) {
-        const services = getStaticData('loans');
-        const banks = getStaticData('banks');
-        console.log('Loaded services:', services);
-        console.log('Loaded banks:', banks);
-        populateLoanServices(services);
-        populateBankPartners(banks);
+    const currentPage = window.location.pathname.split('/').pop();
+
+    switch(currentPage) {
+        case 'courses.html':
+            const courseData = getStaticData('courses');
+            populateCourseCategories(courseData);
+            break;
+        case 'education.html':
+            const partnerInstitutions = getStaticData('partner-institutions');
+            populatePartnerInstitutions(partnerInstitutions);
+            break;
+        case 'loans.html':
+            const loanServices = getStaticData('loan-services');
+            const bankPartners = getStaticData('bank-partners');
+            populateLoanServices(loanServices);
+            populateBankPartners(bankPartners);
+            break;
     }
 });
