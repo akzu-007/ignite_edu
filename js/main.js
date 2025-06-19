@@ -1,21 +1,26 @@
 // Static data instead of loading from CSV
 function getStaticData(type) {
     const data = {
-        loans: [
+        "loans": [
             { type: "Home Loan", description: "Complete assistance for home loans including property valuation, documentation, and bank coordination. We help you get the best interest rates." },
             { type: "Business Loan", description: "Comprehensive support for business loans with expert guidance on documentation, business plan preparation, and bank negotiations." },
             { type: "Personal Loan", description: "Quick and efficient personal loan processing with minimal documentation. We ensure fast approval and disbursement." },
             { type: "Education Loan", description: "Specialized education loan services for students with complete documentation support and college coordination." },
             { type: "Vehicle Loan", description: "Assistance in vehicle loan processing with quick approval and competitive interest rates." },
-            { type: "Property Mortgage", description: "Expert guidance in property mortgage with legal verification and documentation support." }
+            { type: "Property Mortgage", description: "Expert guidance in property mortgage with legal verification and documentation support." },
+            { type: "Gold Loan", description: "Quick and easy gold loans with best market value assessment and competitive interest rates." },
+            { type: "Agricultural Loan", description: "Specialized loans for farmers with comprehensive support for documentation and subsidy programs." },
+            { type: "Commercial Vehicle Loan", description: "Financing solutions for commercial vehicles with flexible repayment options." },
+            { type: "Construction Loan", description: "Project-specific construction financing with stage-wise disbursement facility." }
         ],
-        banks: [
+        "banks": [
             { name: "Global Trust Bank", description: "Offering competitive interest rates on home and personal loans" },
             { name: "City Finance Bank", description: "Specialized in business and commercial loans" },
             { name: "Heritage Banking Corporation", description: "Expert in mortgage and property loans" },
             { name: "National Commerce Bank", description: "Leading provider of education and vehicle loans" },
             { name: "Progressive Credit Union", description: "Focused on personal and small business loans" },
-            { name: "Unity Savings Bank", description: "Comprehensive range of retail and commercial banking services" }
+            { name: "Unity Savings Bank", description: "Comprehensive range of retail and commercial banking services" },
+            { name: "Future Finance Bank", description: "Innovative solutions for all types of loans" }
         ],
         "partner-institutions": [
             {
@@ -281,19 +286,54 @@ function populateLoanServices(services) {
     const servicesContainer = document.getElementById('loan-services');
     if (!servicesContainer) return;
 
-    services.forEach(service => {
-        const serviceElement = document.createElement('div');
-        serviceElement.className = 'col-md-6 mb-4';
-        serviceElement.innerHTML = `
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">${service.type}</h5>
-                    <p class="card-text">${service.description}</p>
+    // Clear existing content
+    servicesContainer.innerHTML = '';
+
+    // Function to render loan services
+    function renderServices(showAll = false) {
+        servicesContainer.innerHTML = '';
+        
+        // Determine how many services to show
+        const servicesToShow = showAll ? services.length : 6;
+        
+        // Create and append service elements
+        services.slice(0, servicesToShow).forEach(service => {
+            const serviceElement = document.createElement('div');
+            serviceElement.className = 'col-md-6 mb-4';
+            serviceElement.innerHTML = `
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">${service.type}</h5>
+                        <p class="card-text">${service.description}</p>
+                    </div>
                 </div>
-            </div>
-        `;
-        servicesContainer.appendChild(serviceElement);
-    });
+            `;
+            servicesContainer.appendChild(serviceElement);
+        });
+
+        // Add or remove "View More" button as needed
+        const existingButton = document.querySelector('.view-more-loans');
+        if (existingButton) {
+            existingButton.remove();
+        }
+
+        if (!showAll && services.length > 6) {
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'col-12 text-center mt-3';
+            buttonContainer.innerHTML = `
+                <button class="btn btn-primary view-more-loans">View More Loans</button>
+            `;
+            servicesContainer.parentElement.appendChild(buttonContainer);
+
+            // Add click event to the button
+            buttonContainer.querySelector('.view-more-loans').addEventListener('click', () => {
+                renderServices(true);
+            });
+        }
+    }
+
+    // Initial render with 6 items
+    renderServices(false);
 }
 
 // Function to populate bank partners
@@ -301,22 +341,58 @@ function populateBankPartners(banks) {
     const container = document.getElementById('bank-partners');
     if (!container) return;
 
-    banks.forEach((bank, index) => {
-        const bankElement = document.createElement('div');
-        bankElement.className = 'col-md-6 col-lg-4 mb-4';
-        bankElement.innerHTML = `
+    // Clear existing content
+    container.innerHTML = '';
+
+    // Function to render banks
+    function renderBanks(showAll = false) {
+        container.innerHTML = '';
+        
+        // Determine how many banks to show
+        const banksToShow = showAll ? banks.length : 6;
+
+        // New code with circular overlay
+        banks.slice(0, banksToShow).forEach((bank, index) => {
+            const bankElement = document.createElement('div');
+            bankElement.className = 'col-md-6 col-lg-4 mb-4';
+            bankElement.innerHTML = `
             <div class="card bank-card h-100">
-                <div class="card-body text-center">
-                    <div class="bank-logo">
-                        ${bank.name.charAt(0)}
-                    </div>
-                    <h5 class="card-title">${bank.name}</h5>
-                    <p class="card-text">${bank.description}</p>
-                </div>
+            <div class="card-body text-center">
+            <div class="logo-circle">
+                <!-- <img src="images/banks/${index % 7 + 1}.jpg" alt="${bank.name} Logo" class="bank-logo mb-3"> -->
+                <img src="images/banks/${index % 7 + 1}.jpg" alt="${bank.name} Logo" class="bank-logo mb-3">
             </div>
-        `;
-        container.appendChild(bankElement);
-    });
+            <h5 class="card-title">${bank.name}</h5>
+            <p class="card-text">${bank.description}</p>
+            </div>
+            </div>
+            `;
+            container.appendChild(bankElement);
+        });
+
+        // Add or remove "View All" button as needed
+        const existingButton = document.querySelector('.view-all-banks');
+        if (existingButton) {
+            existingButton.remove();
+        }
+
+        if (!showAll && banks.length > 6) {
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'col-12 text-center mt-3';
+            buttonContainer.innerHTML = `
+                <button class="btn btn-primary view-all-banks">View All Banks</button>
+            `;
+            container.parentElement.appendChild(buttonContainer);
+
+            // Add click event to the button
+            buttonContainer.querySelector('.view-all-banks').addEventListener('click', () => {
+                renderBanks(true);
+            });
+        }
+    }
+
+    // Initial render with 6 items
+    renderBanks(false);
 }
 
 // Initialize the page based on current page
@@ -333,8 +409,8 @@ document.addEventListener('DOMContentLoaded', () => {
             populatePartnerInstitutions(partnerInstitutions);
             break;
         case 'loans.html':
-            const loanServices = getStaticData('loan-services');
-            const bankPartners = getStaticData('bank-partners');
+            const loanServices = getStaticData('loans');
+            const bankPartners = getStaticData('banks');
             populateLoanServices(loanServices);
             populateBankPartners(bankPartners);
             break;
