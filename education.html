@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Consulting - Ignite Foundation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/cap_logo_col.png">
+    <link rel="apple-touch-icon" href="images/cap_logo_col.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Expert education consulting services at Ignite Foundation. Get guidance for nursing and engineering courses, college admissions, and application processing.">
+    <meta name="keywords" content="education consulting, nursing courses, engineering admission, college guidance, Kerala education, Ignite Foundation">
+    <meta name="author" content="Ignite Foundation">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Education Consulting - Ignite Foundation">
+    <meta property="og:description" content="Get expert guidance for nursing and engineering courses, college admissions, and application processing at Ignite Foundation.">
+    <meta property="og:image" content="images/cap_logo_col.png">
+    <meta property="og:url" content="">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!-- Navigation -->    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Ignite Foundation</a>
+            <a class="navbar-brand" href="index.html"></a>
+                <img src="images/logo_white_small.png" alt="Ignite Logo" height="30" class="d-inline-block align-text-top me-2">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="education.html">Education Consulting</a>
+                        <a class="nav-link" href="education.html">Education Consulting</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="loans.html">Loan Services</a>
@@ -31,44 +50,91 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="education-header py-5">
+    <!-- Header & About Section with Background -->
+    <section class="hero-section py-5" style="background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('images/edu_bg.png') no-repeat center center; background-size: cover; min-height: 80vh; display: flex; align-items: center;">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mb-5">
                     <h1>Education Consulting Services</h1>
                     <p class="lead">Your pathway to academic excellence</p>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <!-- About Us Section -->
-    <section class="about-us py-5" style="background-color: #f8f9fa;">
-        <div class="container">
-            <h2 class="text-center mb-4">About Our Education Services</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <p>At Ignite Foundation, we specialize in guiding students towards their academic goals. Our experienced consultants work closely with you to understand your aspirations and help you make informed decisions about your educational future.</p>
+                    <div class="about-text">
+                        <p>At Ignite Foundation, we specialize in guiding students towards their academic goals. Our experienced consultants work closely with you to understand your aspirations and help you make informed decisions about your educational future.</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <p>Whether you're interested in Nursing, Engineering, or other professional courses, we provide comprehensive support throughout your academic journey. From college selection to application processing, we're here to help you succeed.</p>
+                    <div class="about-text">
+                        <p>Whether you're interested in Nursing, Engineering, or other professional courses, we provide comprehensive support throughout your academic journey. From college selection to application processing, we're here to help you succeed.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>    <!-- Partner Institutions -->
+    </section>
+    <!-- Partner Institutions -->
     <section class="courses py-5" style="background-color: #e9ecef;">
         <div class="container">
             <h2 class="text-center mb-4">Partner Institutions</h2>
-            <div class="row" id="course-listings">
-                <!-- Partner institutions will be populated dynamically -->
+            <div class="row" id="partner-institutions"></div>
+                <!-- Cards will be dynamically populated from main.js -->
             </div>
             <div class="text-center mt-4">
                 <a href="courses.html" class="btn btn-primary">View All Courses & Requirements</a>
             </div>
         </div>
     </section>
-
+    <!-- logo of institutes-->
+    <section class="institutes-logos py-5">
+        <div class="container">
+            <!-- <h2 class="text-center mb-4">Our Partner Institutions</h2> -->
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/pes.jpg" alt="Institute 1" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/acharya.jpg" alt="Institute 2" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/krupa.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/mvm.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/ramaiah.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/dhanwa.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/kairali.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/kvg.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/lakshmi.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/mg.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/rr.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/seaet.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                    <div class="col-md-3 text-center">
+                    <img src="images/edu/sres.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/edu/srnc.jpg" alt="Institute 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Testimonials -->
     <section class="testimonials py-5" style="background-color: #f8f9fa;">
         <div class="container">
@@ -138,39 +204,54 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Contact Information</h5>
-                    <p>Email: ignitewealthedu@gmail.com<br>
-                    <span style="color: #fff;">Phone: 
-                    <a href="tel:8075214664" style="color: #fff;">8075214664</a>, 
+<!-- Footer -->
+<footer class="bg-dark text-light py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h5>Contact Information</h5>
+                <p>Email: ignitewealthedu@gmail.com</p>
+                <p>Phone:
+                    <a href="tel:8075214664" style="color: #fff;">8075214664</a>,
                     <a href="tel:6238122788" style="color: #fff;">6238122788</a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="tel:9074412466" style="color: #fff;">9074412466</a>, 
+                    <a href="tel:9074412466" style="color: #fff;">9074412466</a>,
                     <a href="tel:9496442841" style="color: #fff;">9496442841</a>
-                    </span>
-                    </p>
-                    <a href="https://wa.me/https://wa.me/918075214664" class="whatsapp-link" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </p>
+                <div class="social-icons mt-3">
+                    <a href="https://wa.me/918075214664" target="_blank" style="color: #fff; font-size: 24px; margin-left: 10px;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/15jqkxxmTZ/" target="_blank" style="color: #fff; font-size: 24px; margin-left: 10px;">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ignite_education_financials/#" target="_blank" style="color: #fff; font-size: 24px; margin-left: 10px;">
+                        <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-                <div class="col-md-4 text-center">
-                    <h5>Scan to Chat</h5>
-                    <div class="qr-code">
-                        <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code">
-                    </div>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <h5>Address</h5>
-                    <p>Ignite Foundation<br>
-                    SN Plaza, College Jn <br> Nangiarkulangara, Haripad</p>
-                </div>
+            </div>
+
+            <!-- Address and Social Icons -->
+            <div class="col-md-6 text-md-end">
+                <h5>Address</h5>
+                <p>
+                    Ignite Foundation<br>
+                    SN Plaza, College Jn<br>
+                    Nangiarkulangara, Haripad
+                </p>
+                <a href="https://maps.google.com/?q=Ignite+Foundation+SN+Plaza+College+Junction+Nangiarkulangara+Haripad"
+                   target="_blank"
+                   style="color: #fff; text-decoration: none;">
+                    <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                </a>
+
+                <!-- Social Icons -->
+
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
 
     <!-- Font Awesome for WhatsApp icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
