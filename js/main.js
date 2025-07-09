@@ -45,40 +45,368 @@ function getStaticData(type) {
             }
         ],
         "courses": {
-            "Nursing": [
+            "Healthcare": [
                 {
-                    name: "BSc Nursing",
+                    name: "B.Sc Nursing",
                     duration: "4 years",
                     eligibility: "12th with Science (PCB)",
                     description: "Bachelor of Science in Nursing program"
                 },
                 {
-                    name: "Post Basic BSc Nursing",
+                    name: "B.Pharm",
+                    duration: "4 years",
+                    eligibility: "12th with PCB",
+                    description: "Bachelor of Pharmacy"
+                },
+                {
+                    name: "B.Sc Allied Health Sciences",
+                    duration: "3-4 years",
+                    eligibility: "12th with Science",
+                    description: "Various specializations in healthcare"
+                },
+                {
+                    name: "B.Sc Food Technology & Quality Assurance",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Food technology and quality assurance"
+                },
+                {
+                    name: "B.Sc Optometry",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Optometry and vision science"
+                },
+                {
+                    name: "B.Sc Phycology",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Study of algae and aquatic plants"
+                },
+                {
+                    name: "B.Sc Hospital Administration",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Hospital and healthcare administration"
+                },
+                {
+                    name: "B.Sc Cardiac Care Technology (Cct)",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Cardiac care technology specialization"
+                },
+                {
+                    name: "B.Sc Anasthesia & Operation Theatre Technology (Pes University)",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Anesthesia and OT technology"
+                },
+                {
+                    name: "B.Sc Medical Laboratory",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Medical laboratory technology"
+                },
+                {
+                    name: "B.Sc Emergency Medical Technology",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Emergency medical technology"
+                },
+                {
+                    name: "B.Sc Microbiology",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Microbiology specialization"
+                },
+                {
+                    name: "B.Sc Rct (Root Canal Treatment)",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Root canal treatment specialization"
+                },
+                {
+                    name: "B.Sc Medical Radiology",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Medical radiology specialization"
+                },
+                {
+                    name: "B.Sc Medical Imaging Technology",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Medical imaging technology"
+                },
+                {
+                    name: "B.Sc AT & OT",
+                    duration: "3 years",
+                    eligibility: "12th with Science",
+                    description: "Assistive Technology & Occupational Therapy"
+                },
+                {
+                    name: "BASLT Bachelor Of Audiology & Speech Language Pathology",
+                    duration: "4 years",
+                    eligibility: "12th with Science",
+                    description: "Audiology & Speech Language Pathology"
+                },
+                {
+                    name: "BHA Healthcare Administration",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Healthcare administration specialization"
+                },
+                {
+                    name: "BOT Bachelor Of Occupational Therapy",
+                    duration: "4 years",
+                    eligibility: "12th with Science",
+                    description: "Bachelor of Occupational Therapy"
+                },
+                {
+                    name: "BPT Bachelor Of Physiotherapy",
+                    duration: "4.5 years",
+                    eligibility: "12th with Science",
+                    description: "Bachelor of Physiotherapy"
+                },
+                {
+                    name: "D.Pharm",
                     duration: "2 years",
-                    eligibility: "GNM",
-                    description: "Post Basic Bachelor of Science in Nursing"
+                    eligibility: "12th with Science",
+                    description: "Diploma in Pharmacy"
+                },
+                {
+                    name: "GNM",
+                    duration: "3 years",
+                    eligibility: "12th with any stream",
+                    description: "General Nursing and Midwifery"
+                },
+                {
+                    name: "Hotel & Tourism Management",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Hospitality and tourism management"
+                },
+                {
+                    name: "M.Pharm",
+                    duration: "2 years",
+                    eligibility: "B.Pharm",
+                    description: "Master of Pharmacy"
+                },
+                {
+                    name: "M.Sc Microbiology",
+                    duration: "2 years",
+                    eligibility: "B.Sc Microbiology or related field",
+                    description: "Master of Science in Microbiology"
+                },
+                {
+                    name: "MBBS",
+                    duration: "5.5 years",
+                    eligibility: "12th with PCB<br>NEET qualification",
+                    description: "Bachelor of Medicine and Bachelor of Surgery"
+                }
+            ],
+            "Technology": [
+                {
+                    name: "B.Sc Cyber Forensic",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "Specialization in cyber security and forensics"
+                },
+                {
+                    name: "B.Sc Computer Science",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "Bachelor's in Computer Science"
+                },
+                {
+                    name: "B.Sc AI & DS Artificial Intelligence & Data Science",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "Artificial Intelligence & Data Science specialization"
+                },
+                {
+                    name: "BCA AI Artificial Intelligence And Data Science",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "BCA with AI and Data Science specialization"
+                },
+                {
+                    name: "BCA AI Cloud Computing Cyber Security",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "BCA with AI,<br>Cloud Computing,<br>Cyber Security specialization"
+                },
+                {
+                    name: "BCA All Branches",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "Bachelor of Computer Applications in all branches"
+                },
+                {
+                    name: "BCA AI Artificial Intelligence",
+                    duration: "3 years",
+                    eligibility: "12th with Mathematics",
+                    description: "BCA with Artificial Intelligence specialization"
+                },
+                {
+                    name: "Deploma Full Stack Development",
+                    duration: "1 year",
+                    eligibility: "12th pass",
+                    description: "Diploma in Full Stack Development"
+                },
+                {
+                    name: "MCA IBM",
+                    duration: "2 years",
+                    eligibility: "Graduation in Computer Science<br>or related field",
+                    description: "Master of Computer Applications (IBM specialization)"
+                }
+            ],
+            "Business": [
+                {
+                    name: "B.Com Computer Application",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Commerce with focus on computer applications"
+                },
+                {
+                    name: "B.Com Finance & Time",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Specialization in finance and time management"
+                },
+                {
+                    name: "B.Com Logistic",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Specialization in logistics management"
+                },
+                {
+                    name: "B.Com CMA",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Cost and Management Accounting specialization"
+                },
+                {
+                    name: "B.Com Stock Market & Trading",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Specialization in stock market and trading"
+                },
+                {
+                    name: "B.Com Fintech",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Financial technology specialization"
+                },
+                {
+                    name: "B.Sc Hotel Management",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Hospitality and hotel management"
+                },
+                {
+                    name: "B.Sc Bachelor Of Hotel Management",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Bachelor of Hotel Management"
+                },
+                {
+                    name: "BBA Aviation And Logistic",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Business administration in aviation and logistics"
+                },
+                {
+                    name: "BBA Business Analystics",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Business analytics specialization"
+                },
+                {
+                    name: "Hotel & Tourism Management",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Hospitality and tourism management"
+                },
+                {
+                    name: "M.Com Finance & Taxation",
+                    duration: "2 years",
+                    eligibility: "B.Com or equivalent",
+                    description: "Master of Commerce in Finance & Taxation"
+                },
+                {
+                    name: "MBA Master Of Business Administration",
+                    duration: "2 years",
+                    eligibility: "Graduation in any discipline",
+                    description: "Master of Business Administration"
                 }
             ],
             "Engineering": [
                 {
-                    name: "B.Tech Computer Science",
+                    name: "B.Tech All Branches",
                     duration: "4 years",
                     eligibility: "12th with PCM",
-                    description: "Bachelor of Technology in Computer Science"
+                    description: "Engineering in various specializations"
                 },
                 {
-                    name: "B.Tech Mechanical",
+                    name: "Marine Engineering",
                     duration: "4 years",
                     eligibility: "12th with PCM",
-                    description: "Bachelor of Technology in Mechanical Engineering"
+                    description: "Specialization in marine engineering"
                 }
             ],
-            "Medical": [
+            "Others": [
                 {
-                    name: "MBBS",
-                    duration: "5.5 years",
-                    eligibility: "12th with PCB, NEET qualification",
-                    description: "Bachelor of Medicine and Bachelor of Surgery"
+                    name: "B.Sc Agricultural",
+                    duration: "4 years",
+                    eligibility: "12th with Science",
+                    description: "Agricultural sciences and technology"
+                },
+                {
+                    name: "B.Sc Fashion Photography",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Professional fashion photography"
+                },
+                {
+                    name: "BA All Branches",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Bachelor of Arts in various specializations"
+                },
+                {
+                    name: "BSW Labour Welfare Social Work",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Bachelor of Social Work in Labour Welfare and Social Work"
+                },
+                {
+                    name: "BVA Bachelor Of Visual Arts",
+                    duration: "4 years",
+                    eligibility: "12th pass",
+                    description: "Bachelor of Visual Arts"
+                },
+                {
+                    name: "Deploma Airline Cabin Crew",
+                    duration: "1 year",
+                    eligibility: "12th pass",
+                    description: "Diploma in Airline Cabin Crew"
+                },
+                {
+                    name: "Deploma Under Water Welding",
+                    duration: "1 year",
+                    eligibility: "12th pass",
+                    description: "Diploma in Under Water Welding"
+                },
+                {
+                    name: "Fashion Designing (Advance Fabric Styling)",
+                    duration: "3 years",
+                    eligibility: "12th pass",
+                    description: "Advanced Fabric Styling and Fashion Designing"
+                },
+                {
+                    name: "MSW Master Of Social Work",
+                    duration: "2 years",
+                    eligibility: "Graduation in any discipline",
+                    description: "Master of Social Work"
                 }
             ]
         }
@@ -116,11 +444,13 @@ function populateCourseCategories(coursesByCategory) {
     // Clear existing content
     container.innerHTML = '';
 
+    // Dynamically get all categories
+    const categories = Object.keys(coursesByCategory);
+
     // Function to render courses
     function renderCourses(category = 'all') {
         container.innerHTML = '';
-        
-        Object.keys(coursesByCategory).forEach(courseCategory => {
+        categories.forEach(courseCategory => {
             if (category === 'all' || category === courseCategory) {
                 const categorySection = document.createElement('div');
                 categorySection.className = 'col-12 mb-4';
@@ -145,9 +475,9 @@ function populateCourseCategories(coursesByCategory) {
                             <div class="card-body">
                                 <h5 class="card-title">${course.name}</h5>
                                 <p class="card-text">
-                                    <strong>Duration:</strong> ${course.duration}<br>
-                                    <strong>Eligibility:</strong> ${course.eligibility}<br>
-                                    ${course.description}
+                                    <strong>Duration:</strong> ${course.duration ? course.duration : '-'}<br>
+                                    <strong>Eligibility:</strong> ${course.eligibility ? course.eligibility : '-'}<br>
+                                    ${course.description ? course.description : ''}
                                 </p>
                             </div>
                         </div>
@@ -164,15 +494,12 @@ function populateCourseCategories(coursesByCategory) {
     // Initial render
     renderCourses('all');
 
-    // Set up filter buttons
+    // Set up filter buttons dynamically
     const filterButtons = document.querySelectorAll('.category-filters button');
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             button.classList.add('active');
-            // Get selected category and render
             const category = button.getAttribute('data-category');
             renderCourses(category);
         });
