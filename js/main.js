@@ -14,34 +14,76 @@ function getStaticData(type) {
             { type: "Construction Loan", description: "Project-specific construction financing with stage-wise disbursement facility." }
         ],
         "banks": [
-            { name: "Global Trust Bank", description: "Offering competitive interest rates on home and personal loans" },
-            { name: "City Finance Bank", description: "Specialized in business and commercial loans" },
-            { name: "Heritage Banking Corporation", description: "Expert in mortgage and property loans" },
-            { name: "National Commerce Bank", description: "Leading provider of education and vehicle loans" },
-            { name: "Progressive Credit Union", description: "Focused on personal and small business loans" },
-            { name: "Unity Savings Bank", description: "Comprehensive range of retail and commercial banking services" },
-            { name: "Future Finance Bank", description: "Innovative solutions for all types of loans" }
+            { name: "Bank of Baroda", description: "A major public sector bank in India offering a wide range of financial services." },
+            { name: "Union Bank of India", description: "A government-owned bank known for retail and corporate banking across India." },
+            { name: "State Bank of India (SBI)", description: "India’s largest public sector bank with extensive domestic and international operations." },
+            { name: "Piramal Finance", description: "A part of the Piramal Group providing housing and business loans through its NBFC arm." },
+            { name: "Shriram Finance", description: "A leading NBFC focused on commercial vehicle loans and financial services for the underserved." },
+            { name: "HDFC Bank", description: "India’s largest private bank known for its technology-driven retail and corporate banking." },
+            { name: "ICICI Bank", description: "A top private sector bank with a strong digital platform and diverse offerings." },
+            { name: "Federal Bank", description: "A private sector bank with a strong presence in South India, offering digital and traditional banking." },
+            { name: "Kotak Mahindra Bank", description: "A leading private bank known for innovative financial products and digital services." },
+            { name: "Canara Bank", description: "One of the oldest public sector banks in India with a wide rural and urban presence." },
+            { name: "IDFC FIRST Bank", description: "A new-age private bank focused on retail lending and digital-first banking." },
+            { name: "Tata Capital", description: "An NBFC offering loans, wealth management, and other financial services." },
+            { name: "South Indian Bank", description: "A Kerala-based private bank offering traditional and digital banking services." },
+            { name: "Ujjivan Small Finance Bank", description: "A small finance bank catering primarily to underserved and unbanked segments." },
+            { name: "DCB Bank", description: "A private sector bank with a strong focus on small businesses and inclusive banking." },
+            { name: "Poonawalla Fincorp", description: "A fast-growing NBFC offering personal and business loans with a digital-first approach." },
+            { name: "CreditBee", description: "A fintech company providing instant personal loans to young professionals and salaried individuals." },
+            { name: "LIC Housing Finance (LIC HFL)", description: "A subsidiary of LIC offering home loans and related financial services." },
+            { name: "Money View", description: "A fintech platform providing personal loans and financial tools via an app-based interface." },
+            { name: "TVS Credit", description: "An NBFC offering consumer and vehicle financing, especially in semi-urban and rural markets." },
+            { name: "L&T Finance", description: "A diversified NBFC from the L&T Group providing infrastructure, housing, and rural finance." },
+            { name: "Mahindra Finance", description: "An NBFC focused on rural and semi-urban lending, especially for vehicles and tractors." },
+            { name: "Manappuram Finance", description: "A leading gold loan provider in India with a wide branch network." },
+            { name: "Manappuram Home Finance", description: "A subsidiary of Manappuram offering affordable housing loans." },
+            { name: "Muthoot Finance", description: "One of India’s largest NBFCs specializing in gold loans and related services." },
+            { name: "Muthoot Capital", description: "A Muthoot Group company providing two-wheeler and small business loans." },
+            { name: "Cholamandalam Finance", description: "A Murugappa Group NBFC offering vehicle, home, and business loans." },
+            { name: "Sundaram Finance", description: "A trusted NBFC known for vehicle financing and investment services in South India." },
+            { name: "IndusInd Bank", description: "A new-generation private bank with strong corporate, retail, and digital services." }
         ],
         "partner-institutions": [
             {
-                name: "St. Joseph's College of Nursing",
-                location: "Dharmagiri, Kothamangalam",
-                type: "Nursing"
+                name: "Acharya Group of Institutions (Acharya Institutes)",
+                location: "Bengaluru",
+                type: "Engineering, Management, Design"
             },
             {
-                name: "Westfort College of Nursing",
-                location: "Thrissur",
-                type: "Nursing"
+                name: "Mahatma Gandhi Professional College of Nursing",
+                location: "Bengaluru",
+                type: "Nursing College"
             },
             {
-                name: "Mar Baselios College of Engineering",
-                location: "Thiruvananthapuram",
-                type: "Engineering"
+                name: "Dhanwantari Group of Institutions (Nursing)",
+                location: "Bengaluru",
+                type: "Nursing College"
             },
             {
-                name: "Rajagiri College of Engineering",
-                location: "Kochi",
-                type: "Engineering"
+                name: "SEA College of Engineering & Technology",
+                location: "Bengaluru",
+                type: "Engineering College"
+            },
+            {
+                name: "Sri Raghavendra School & College of Nursing",
+                location: "Bengaluru",
+                type: "Nursing College"
+            },
+            {
+                name: "Raja Rajeswari Medical College & Hospital",
+                location: "Bengaluru",
+                type: "Medical College"
+            },
+            {
+                name: "Mallige Institutions",
+                location: "Bengaluru",
+                type: "Nursing, Pharmacy & Allied Health"
+            },
+            {
+                name: "Pragathi Group of Institutions",
+                location: "Mangalore",
+                type: "Professional / Multi-disciplinary"
             }
         ],
         "courses": {
