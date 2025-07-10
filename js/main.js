@@ -768,16 +768,19 @@ function populateBankPartners(banks) {
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop();
 
-    switch(currentPage) {
-        case 'courses.html':
+    // Normalize currentPage to handle both with and without .html
+    let pageName = currentPage.replace('.html', '');
+
+    switch(pageName) {
+        case 'courses':
             const courseData = getStaticData('courses');
             populateCourseCategories(courseData);
             break;
-        case 'education.html':
+        case 'education':
             const partnerInstitutions = getStaticData('partner-institutions');
             populatePartnerInstitutions(partnerInstitutions);
             break;
-        case 'loans.html':
+        case 'loans':
             const loanServices = getStaticData('loans');
             const bankPartners = getStaticData('banks');
             populateLoanServices(loanServices);
