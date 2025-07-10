@@ -768,23 +768,33 @@ function populateBankPartners(banks) {
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop();
 
+    console.log("Current page:", currentPage);
     // Normalize currentPage to handle both with and without .html
     let pageName = currentPage.replace('.html', '');
+    console.log("Page name:", pageName);
 
     switch(pageName) {
         case 'courses':
+            console.log("✅ courses page matched");
             const courseData = getStaticData('courses');
             populateCourseCategories(courseData);
             break;
         case 'education':
+            console.log("✅ education page matched");
             const partnerInstitutions = getStaticData('partner-institutions');
             populatePartnerInstitutions(partnerInstitutions);
             break;
         case 'loans':
+            console.log("✅ loans page matched");
             const loanServices = getStaticData('loans');
             const bankPartners = getStaticData('banks');
             populateLoanServices(loanServices);
             populateBankPartners(bankPartners);
             break;
+        case 'loans.html':
+            console.log("✅ loans.html matched");
+            break;
+        default:
+            console.warn("❌ Page mismatch:", currentPage);
     }
 });
